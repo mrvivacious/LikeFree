@@ -1,0 +1,32 @@
+{
+  "manifest_version": 2,
+
+  "name": "LikeFreeDEV",
+  "description": "Hide likes on Instagram and Facebook so that you can focus on the bigger picture. Express yourself freely.",
+  "version": "0.0.3",
+
+  "browser_action": {
+    "default_icon": "icons/heart-icon-48.png",
+    "default_popup": "popup.html",
+    "default_title": "LikeFree"
+  },
+
+  "icons": { "16": "icons/heart-icon-16.png",
+             "48": "icons/heart-icon-48.png",
+             "128": "icons/heart-icon-128.png" },
+
+
+  "content_scripts": [
+    {
+      "matches": ["*://www.instagram.com/*", "https://*.instagram.com/*",
+      "*://www.facebook.com/*", "https://*.facebook.com/*"],
+      "js": ["jquery.min.js", "myscript.js", "likefree.js"],
+      "run_at": "document_end"
+    }
+  ],
+
+  "permissions": [
+    "activeTab",
+    "storage"
+  ]
+}
