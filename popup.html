@@ -8,14 +8,20 @@
 
 <head>
   <title>LikeFree's Popup</title>
+
   <style type="text/css">
     body {
       margin: 10px;
       white-space: nowrap;
+      /* background-color: blanchedAlmond; */
     }
 
     h1 {
       font-size: 15px;
+    }
+
+    hr {
+        color: black;
     }
 
     #container {
@@ -23,6 +29,37 @@
       display: flex;
       justify-content: space-between;
     }
+
+
+    a:link {
+        color: brown;
+        background-color: transparent;
+        text-decoration: none;
+        outline: none;
+    }
+
+    a:visited {
+        color: brown;
+        background-color: transparent;
+        text-decoration: none;
+        outline: none;
+    }
+
+    a:hover {
+        color: pink;
+        background-color: transparent;
+        outline: none;
+        /*text-decoration: underline;*/
+    }
+
+
+    /* https://www.w3schools.com/howto/howto_css_vertical_menu.asp */
+    .vertical-menu {
+    /* width: 200px; /* Set a width if you like */
+    display: block; /* Make the links appear below each other */
+    /* padding: 12px; /* Add some padding */
+    }
+
   </style>
 
   <!--
@@ -31,16 +68,27 @@
       -
       - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
     -->
+  <script src="jquery.min.js"></script>
   <script src="myscript.js"></script>
   <script src="likefree.js"></script>
 
 </head>
 
 <body>
-  <h1>LikeFree</h1>
+  <h1><a href="http://mrvivacio.us/posts/LikeFree.html" target="_blank">
+      LikeFree</a></h1>
   <div id="container">
 
-      <span>Likes are gone! Focus on what's important.</span>
+      <div class="vertical-menu">
+          <span>Likes are gone! Focus on what's important.</span>
+          <hr>
+          <span>If you <span style="color:red; font-size:14px;">&hearts;</span> LikeFree, please <a href="https://chrome.google.com/webstore/detail/likefree/hejgbghjhjiilikhjinpbooockoiipek" target="_blank">
+              leave a review</a>!
+        <br>
+        <em>Thank you for your support <span style="color:black; font-size:14px;">&hearts;</span></em></span>
+
+      </div>
+
 
   </div>
 </body>
