@@ -3,7 +3,7 @@
 
   "name": "LikeFree DEV",
   "description": "Hide likes on Instagram and Facebook so that you can focus on the bigger picture. Express yourself freely.",
-  "version": "0.0.4.1",
+  "version": "0.0.5",
 
   "browser_action": {
     "default_icon": "icons/heart-icon-48.png",
