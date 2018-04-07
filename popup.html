@@ -12,12 +12,23 @@
   <style type="text/css">
     body {
       margin: 10px;
-      white-space: nowrap;
+      display: block;
+
+      /* white-space: nowrap; */
       /* background-color: blanchedAlmond; */
     }
 
     h1 {
       font-size: 15px;
+    }
+
+    p {
+        font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    	font-size: 15px;
+    	font-style: normal;
+    	font-variant: normal;
+        margin: 0px;
+        padding: 5px;
     }
 
     hr {
@@ -55,9 +66,8 @@
 
     /* https://www.w3schools.com/howto/howto_css_vertical_menu.asp */
     .vertical-menu {
-    /* width: 200px; /* Set a width if you like */
+    width: 250px;
     display: block; /* Make the links appear below each other */
-    /* padding: 12px; /* Add some padding */
     }
 
   </style>
@@ -83,8 +93,7 @@
       <div class="vertical-menu">
           <span>Likes are gone! Focus on what's important.</span>
           <hr>
-          <span id="message" style="font-size:14px;">Magical messages go here</span>
-          <br>
+          <p id="message">Cycle Magical Messages</p>
           <span align="right"><em>- Vivek</em></span>
         </span>
           <hr>

@@ -11,7 +11,7 @@ function GenerateMagicalMessage() {
     "When you aren't feeling your best, you are prone to fall for the worst",
     "The way you see yourself is not the way others see you...and the way others see you isn't" +
                     " necessarily who you really are.",
-    "Commitments and responsibilities cease, but knowledge and love is eternal.",
+    "Commitments and responsibilities cease, but knowledge and love are eternal.",
     "Live and let live. Don't let the lives of others inhibit you from living yours.",
     "Don't hold others to your personal standards, and don't hold yourself to the standards " +
                     "of others.",
