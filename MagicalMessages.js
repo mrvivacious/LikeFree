@@ -1,3 +1,7 @@
+// LikeFree
+// @author Vivek Bhookya
+// Magical Messages support in the popup
+
 $(document).ready(function () {
   GenerateMagicalMessage();
 });

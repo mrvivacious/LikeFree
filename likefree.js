@@ -1,10 +1,11 @@
 // LikeFree
 // @Author Vivek Bhookya
+// The scripts that remove the likes
 
 // Run script whenever user scrolls....
 // Instagram's list for their feed is dynamic.
 // A post that once had its likes removed will regain them if scrolled
-//  too far after it. .scroll() ensures that my script will match
+//  too far after it. .scroll() and .mousemove() ensures that my script will match
 //  Instagram's loading scripts
 $(document).ready(function () {
   //Initial remove on pageload
@@ -17,12 +18,17 @@ $(document).ready(function () {
   $(".UFIShareRow").remove();
   $("._10lp").remove();
 
-  // Mwahaha
+  // Covering all the bases lmao jquery is too OP
+  // For when you can't scroll,
+  $(document).mousemove(hide);
+
+  // For when you scroll for extended periods of time but
+  //  don't use your mouse,
   $(document).scroll(hide);
 });
 
 // Helper function
-// No tag or ID left behind 😼
+// NO TAG LEFT BEHIND 😼
 // Randomly-generated IDs that change over time will leave old .remove()s useless,
 //  hence the incredible amount of tags we are accounting for :/
 function hide()
@@ -36,7 +42,7 @@ function hide()
       $("._nt9ow").remove();                            // Photos
       $("._sokb7").remove();                            // Videos
       $("._nlmjy").remove();                            // Photo pop-ups on profile
-
+      $("._gt9ku").remove();                            // The tiny heart notification
 
       // --- FACEBOOK --- //
       $("._4_dr").remove();                             // "Liked by"
@@ -50,6 +56,7 @@ function hide()
       // $(".fcg").remove();
       $("._1g5v.js_b4").remove();
       $("._1vaq").remove();
+      $("._1t6k").remove();
 
 
       // When FACEBOOK posts fill the screen
