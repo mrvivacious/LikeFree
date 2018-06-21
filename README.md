@@ -8,4 +8,4 @@ Chrome extension that hides likes on the Facebook and Instagram websites
 
 <br>
 To do:
-Add a toggle in the popup for notification support
+<em>Nothing here on my side! Add a pull request if there's a feature you want to see!</em>
