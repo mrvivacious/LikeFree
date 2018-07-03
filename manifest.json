@@ -1,9 +1,9 @@
 {
   "manifest_version": 2,
 
-  "name": "LikeFree DEV",
+  "name": "LikeFree dev",
   "description": "Hide likes on Instagram and Facebook so that you can focus on the bigger picture. Express yourself freely.",
-  "version": "0.0.5.3",
+  "version": "0.0.5.4",
   "author": "Vivek Bhookya",
 
   "browser_action": {

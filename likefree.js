@@ -3,14 +3,14 @@
 // The scripts that remove the likes
 // TODO:
 
-chrome.runtime.setUninstallURL('https://docs.google.com/forms/d/e/1FAIpQLSdzaT3XlrWHJfnzKjUzrNTCFZJBk9HIO0LskHhu4YNH7z_hOQ/viewform?usp=sf_link');
-
 // Run script whenever user scrolls....
 // Instagram's list for their feed is dynamic.
 // A post that once had its likes removed will regain them if scrolled
 //  too far after it. .scroll() and .mousemove() ensures that my script will match
 //  Instagram's loading scripts
 $(document).ready(function () {
+  // chrome.runtime.setUninstallURL('https://docs.google.com/forms/d/e/1FAIpQLSdzaT3XlrWHJfnzKjUzrNTCFZJBk9HIO0LskHhu4YNH7z_hOQ/viewform?usp=sf_link');
+
   hide();
   setInterval(hide, 30);
 
@@ -50,9 +50,9 @@ function hide()
            $("._1vaq").remove();
            $("._1t6k").remove();
 
-           $("#notificationsCountValue").remove();
-           $("#mercurymessagesCountValue").remove();
-           $("#requestsCountValue").remove();
+           // $("#notificationsCountValue").remove();
+           // $("#mercurymessagesCountValue").remove();
+           // $("#requestsCountValue").remove();
 
            // When FACEBOOK posts fill the screen
            $("._ipn").remove();    // Reaction number (1/2)
