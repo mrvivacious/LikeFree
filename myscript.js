@@ -5,6 +5,8 @@
 // Modified by Vivek Bhookya
 // Taken from background color changer extension example
 
+chrome.runtime.setUninstallURL('https://docs.google.com/forms/d/e/1FAIpQLSdzaT3XlrWHJfnzKjUzrNTCFZJBk9HIO0LskHhu4YNH7z_hOQ/viewform?usp=sf_link');
+
 /**
  * Get the current URL.
  *
