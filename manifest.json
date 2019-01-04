@@ -1,9 +1,9 @@
 {
   "manifest_version": 2,
 
-  "name": "LikeFree dev",
+  "name": "LikeFree",
   "description": "Hide likes on Instagram and Facebook so that you can focus on the bigger picture. Express yourself freely.",
-  "version": "0.0.5.6",
+  "version": "0.0.6.0",
   "author": "Vivek Bhookya",
 
   "browser_action": {
@@ -17,14 +17,14 @@
              "128": "icons/heart-icon-128.png" },
 
   "background": {
-      "scripts": ["jquery.min.js", "myscript.js", "MagicalMessages.js", "likefree.js"],
+      "scripts": ["MagicalMessages.js", "likefree.js"],
       "persistent": false
       },
 
   "content_scripts": [
     {
       "matches": ["https://*.instagram.com/*", "https://*.facebook.com/*"],
-      "js": ["jquery.min.js", "myscript.js", "MagicalMessages.js", "likefree.js"],
+      "js": ["MagicalMessages.js", "likefree.js"],
       "run_at": "document_end"
     }
   ],
