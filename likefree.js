@@ -1,68 +1,50 @@
 // LikeFree
-// @Author Vivek Bhookya
-// The scripts that remove the likes
-// TODO:
+// likefree.js
+//
+// This file frees FB and IG of likes
+//
+// @author Vivek Bhookya
 
-// Run script whenever user scrolls....
-// Instagram's feed is dynamic.
-// A post that once had its likes removed will regain them if scrolled
-//  too far after it. .scroll() and .mousemove() ensures that my script will match
-//  Instagram's loading scripts
-// $(document).ready(function () {
-  hide();
-  setInterval(hide, 30);
+// Free da Like
+main();
 
-  // .remove() messed up opening the sub-menus, so we just hide these bubbles
-  //  to retain the functionality of the dropdowns
-  document.getElementById('notificationsCountValue').style.visibility='hidden';
-  document.getElementById('mercurymessagesCountValue').style.visibility='hidden';
-  document.getElementById('requestsCountValue').style.visibility='hidden';
-  // The notification number would show up in the title -- now, it won't
-  document.title = "Facebook";
+// Function main
+// LikeFree
+function main() {
+  // Every 10 milliseconds lezgo
+  setInterval(hide, 10);
 
-  // Covering all the bases lmao jquery is too OP
-  // For when you can't scroll,
-  $(document).mousemove(hide);
+  // Should be overkill considering the setInterval
+  // On mouse move
+  document.addEventListener('click', hide, false);
+  document.addEventListener('mousemove', hide, false);
 
-  // For when you scroll for extended periods of time but
-  //  don't use your mouse,
-  $(document).scroll(hide);
-// });
+  // On scroll
+  document.addEventListener('scroll', hide, false);
+}
 
-// Helper function
-// NO TAG LEFT BEHIND 😼
-// Randomly-generated IDs that change over time will leave old .remove()s useless,
-//  hence the incredible amount of tags we are accounting for :/
-function hide()
-{
-  // Remove photo likes and video views
-  //  by calling their ids
-   // --- INSTAGRAM --- //
-   if (window.location.href.toLowerCase().includes('instagram')) {
-     $(".y9v3U").remove();                            // Photos
-     $("._9Ytll").remove();                            // Videos
-     $(".uk0Yc").remove();                             // The tiny heart notification
-     // $("._5ugh").remove();    // Goodbye notifications
-   }
+// Function hide
+// Grabs each community element (one at a time) and removes them
+// One at a time because tfw no jQuery lmao
+// We use the if () statements to silence warnings in the console
+function hide() {
+  let postFeedback = document.getElementsByClassName('_68wo')[0];
+  if (postFeedback) {
+    postFeedback.remove();
+  }
 
-   // --- FACEBOOK --- //
-   if (window.location.href.toLowerCase().includes('facebook')) {
-     $("._4_dr").remove();                             // "Liked by"
-     $("UFIRow UFILikeSentence _4204 _4_dr").remove(); // "Like bar" under posts
-     $("._hly").remove();                              // Reaction number in comments
-     $(".UFICommentLikeButton").remove();              // Reaction icon in comments
-     $(".UFIShareRow").remove();                       // "Times shared" row
-     $("._10lp").remove();                             // Like/reactions white bubble under comments
-     $("._1g5v.js_b4").remove();
-     $("._1vaq").remove();
-     $("._1t6k").remove();
+  let commentReaction = document.getElementsByClassName('_1lh7')[0];
+  if (commentReaction) {
+    commentReaction.remove();
+  }
 
-     // When FACEBOOK posts fill the screen
-     $("._ipn").remove();    // Reaction number (1/2)
-     $("._1g5v").remove();   // Reaction count (2/2)
-     $(".js_1kz").remove();  // "Liked by"
-     $("._50f8").remove();   // View count
-     $("._2x4v").remove();   // Reaction number in comments
-     $(".rfloat _ohf").remove();
-   }
+  let popupFeedback = document.getElementsByClassName('_3399 _1f6t _4_dr')[0];
+  if (popupFeedback) {
+    popupFeedback.remove();
+  }
+
+  let popupCommentReaction = document.getElementsByClassName('_10lo _10lp')[0];
+  if (popupCommentReaction) {
+    popupCommentReaction.remove();
+  }
 }
