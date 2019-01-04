@@ -2,9 +2,7 @@
 // @author Vivek Bhookya
 // Magical Messages support in the popup
 
-$(document).ready(function () {
-  GenerateMagicalMessage();
-});
+GenerateMagicalMessage();
 
 function GenerateMagicalMessage() {
   // The Magical Messages
@@ -64,5 +62,8 @@ function GenerateMagicalMessage() {
   // Selecting a Magical Message
   var messageIndex = Math.floor(Math.random() * messages.length);
   var randomMessage = messages[messageIndex];
-  document.getElementById("message").innerHTML = randomMessage;
+
+  if (document.getElementById("message").innerHTML) {
+    document.getElementById("message").innerHTML = randomMessage;
+  }
 }

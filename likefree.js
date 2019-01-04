@@ -28,6 +28,7 @@ function main() {
 // One at a time because tfw no jQuery lmao
 // We use the if () statements to silence warnings in the console
 function hide() {
+  // Facebook
   let postFeedback = document.getElementsByClassName('_68wo')[0];
   if (postFeedback) {
     postFeedback.remove();
@@ -46,5 +47,17 @@ function hide() {
   let popupCommentReaction = document.getElementsByClassName('_10lo _10lp')[0];
   if (popupCommentReaction) {
     popupCommentReaction.remove();
+  }
+
+  // Instagram
+  let pictureFeedback = document.getElementsByClassName('EDfFK ygqzn')[0];
+  if (pictureFeedback) {
+    pictureFeedback.remove();
+  }
+
+  let pictureHover = document.getElementsByClassName('qn-0x')[0];
+  if (pictureHover) {
+    // .remove() will break Instagram, but hiding the hover is just fine
+    pictureHover.style.visibility = 'hidden';
   }
 }
