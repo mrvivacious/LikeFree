@@ -63,7 +63,7 @@ function GenerateMagicalMessage() {
   var messageIndex = Math.floor(Math.random() * messages.length);
   var randomMessage = messages[messageIndex];
 
-  if (document.getElementById("message").innerHTML) {
+  if (document.getElementById("message")) {
     document.getElementById("message").innerHTML = randomMessage;
   }
 }

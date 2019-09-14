@@ -39,6 +39,16 @@ function hide() {
     commentReaction.remove();
   }
 
+  let reactionsOnPicturePopup = document.getElementsByClassName('_6iic')[0];
+  if (reactionsOnPicturePopup) {
+    reactionsOnPicturePopup.remove();
+  }
+
+  let reactionsInSearchFeed = document.getElementsByClassName('_78j-');
+  for (let i = 0; reactionsInSearchFeed[i]; i++) {
+    reactionsInSearchFeed[i].remove();
+  }
+
   let popupFeedback = document.getElementsByClassName('_3399 _1f6t _4_dr')[0];
   if (popupFeedback) {
     popupFeedback.remove();
