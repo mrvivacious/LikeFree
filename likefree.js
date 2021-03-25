@@ -14,12 +14,9 @@ function main() {
   // Every 10 milliseconds lezgo
   setInterval(hide, 10);
 
-  // Should be overkill considering the setInterval
-  // On mouse move
+  // Mouse and scroll events
   document.addEventListener('click', hide, false);
   document.addEventListener('mousemove', hide, false);
-
-  // On scroll
   document.addEventListener('scroll', hide, false);
 }
 
@@ -29,7 +26,7 @@ function main() {
 // We use the if () statements to silence warnings in the console
 function hide() {
   // Facebook
-  let postFeedback = document.getElementsByClassName('_68wo')[0];
+  let postFeedback = document.getElementsByClassName('bp9cbjyn m9osqain j83agx80 jq4qci2q bkfpd7mw a3bd9o3v kvgmc6g5 wkznzc2l oygrvhab dhix69tm jktsbyx5 rz4wbd8a osnr6wyh a8nywdso s1tcr66n')[0];
   if (postFeedback) {
     postFeedback.remove();
   }
@@ -39,12 +36,12 @@ function hide() {
     commentReaction.remove();
   }
 
-  let reactionsOnPicturePopup = document.getElementsByClassName('_6iic')[0];
+  let reactionsOnPicturePopup = document.getElementsByClassName('_6cuq')[0];
   if (reactionsOnPicturePopup) {
     reactionsOnPicturePopup.remove();
   }
 
-  let reactionsInSearchFeed = document.getElementsByClassName('_78j-');
+  let reactionsInSearchFeed = document.getElementsByClassName('n1l5q3vz bp9cbjyn m9osqain j83agx80 jq4qci2q a3bd9o3v enqfppq2');
   for (let i = 0; reactionsInSearchFeed[i]; i++) {
     reactionsInSearchFeed[i].remove();
   }
@@ -67,7 +64,7 @@ function hide() {
 
   let pictureHover = document.getElementsByClassName('qn-0x')[0];
   if (pictureHover) {
-    // .remove() will break Instagram, but hiding the hover is just fine
+    // .remove() breaks Instagram, hence:
     pictureHover.style.visibility = 'hidden';
   }
 }
