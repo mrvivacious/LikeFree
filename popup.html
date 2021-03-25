@@ -5,126 +5,110 @@
  value "popup.html".
  -->
 <html>
+  <head>
+    <title>LikeFree's Popup</title>
 
-<head>
-  <title>LikeFree's Popup</title>
+    <style type="text/css">
+      body {
+        margin: 10px;
+        display: block;
+        font-size: 14px;
+        width: 300px;
+        /* font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; */
 
-  <style type="text/css">
-    body {
-      margin: 10px;
-      display: block;
-      font-size: 14px;
-      width: 300px;
-      /* font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; */
+        /* white-space: nowrap; */
+        /* background-color: blanchedAlmond; */
+      }
 
-      /* white-space: nowrap; */
-      /* background-color: blanchedAlmond; */
-    }
+      h1 {
+        font-size: 14px;
+      }
 
-    h1 {
-      font-size: 14px;
-    }
-
-    p {
-    	font-size: 18px;
-    	font-style: normal;
-    	font-variant: normal;
+      p {
+        font-size: 18px;
+        font-style: normal;
+        font-variant: normal;
         margin: 0px;
         padding: 5px;
-    }
+      }
 
-    hr {
+      hr {
         color: black;
-    }
+      }
 
-    #container {
-      align-items: center;
-      display: flex;
-      justify-content: space-between;
-    }
+      #container {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+      }
 
 
-    a:link {
+      a:link {
         color: brown;
         background-color: transparent;
         text-decoration: none;
         outline: none;
-    }
+      }
 
-    a:visited {
+      a:visited {
         color: brown;
         background-color: transparent;
         text-decoration: none;
         outline: none;
-    }
+      }
 
-    a:hover {
+      a:hover {
         color: pink;
         background-color: transparent;
         outline: none;
         /*text-decoration: underline;*/
-    }
+      }
 
 
-    /* https://www.w3schools.com/howto/howto_css_vertical_menu.asp */
-    .vertical-menu {
-    /* width: 250px; */
-    display: block; /* Make the links appear below each other */
-    }
+      /* https://www.w3schools.com/howto/howto_css_vertical_menu.asp */
+      .vertical-menu {
+        /* width: 250px; */
+        display: block;
+        /* Make the links appear below each other */
+      }
+    </style>
 
-  </style>
+    <!--
+        - JavaScript and HTML must be in separate files: see our Content Security
+        - Policy documentation[1] for details and explanation.
+        -
+        - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+      -->
+    <script src="likefree.js"></script>
+  </head>
 
-  <!--
-      - JavaScript and HTML must be in separate files: see our Content Security
-      - Policy documentation[1] for details and explanation.
-      -
-      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
-    -->
-  <script src="likefree.js"></script>
-
-</head>
-
-<body>
-  <h1><a href="https://medium.com/@vivekbhookya/likefree-40fa694cab3f" target="_blank">
-      LikeFree</a></h1>
-  <div id="container">
+  <body>
+    <h1><a href="https://medium.com/@vivekbhookya/likefree-40fa694cab3f" target="_blank">
+        LikeFree</a></h1>
+    <div id="container">
 
       <div class="vertical-menu">
-          <span>Likes are gone! Focus on what's important.</span>
-          <hr>
-          <p id="message">Cycle Magical Messages</p>
+        <span>Likes are gone! Focus on what's important.</span>
+        <hr>
+        <p id="message">Cycle Magical Messages</p>
         </span>
-          <hr>
-          <span>If you <span style="color:red; font-size:14px;">&hearts;</span> LikeFree, please <a href="https://chrome.google.com/webstore/detail/likefree/hejgbghjhjiilikhjinpbooockoiipek" target="_blank">
-              leave a review</a>!</span>
+        <hr>
+        <span>If you <span style="color:red; font-size:14px;">&hearts;</span> LikeFree, please <a href="https://chrome.google.com/webstore/detail/likefree/hejgbghjhjiilikhjinpbooockoiipek" target="_blank">
+            leave a review</a>!</span>
         <br>
         <br>
         <span><em>Found something wrong with LikeFree?</em>
-             <a href="https://github.com/mrvivacious/LikeFree/pulls" target="_blank">Make a pull request</a> or <a href="https://github.com/mrvivacious/LikeFree/issues" target="_blank">open an issue</a>!</span>
-        <br>
-        <!-- <br> -->
+          <a href="mailto:jvnnvt@gmail.com?subject=LikeFree" target="_blank">Send an email</a>!
+        </span>
+        <br><br>
 
-        <hr>
-        <span><em>More projects:</em></span>
-        <br>
-        <span><a href='https://chrome.google.com/webstore/detail/porno-beta/fkhfpbfakkjpkhnonhelnnbohblaeooj' target="_blank">
-          <span style="color:gold; font-size:14px;">&hearts;</span> PorNo!</a></span>
-        <br>
-        <span><a href='https://chrome.google.com/webstore/detail/speeddial/aofiljppiempffphbeadcofapjcekeim' target="_blank">
-          <span style="color:springgreen; font-size:14px;">&hearts;</span> SpeedDial</a></span>
-        <hr>
-
-        <!-- <br> -->
-        <!-- <br> -->
-        <span><em>Thank you for your support <span style="color:black; font-size:14px;">&hearts;</span></em></span>
+        <span><em>Thank you for your support <span style="color:black; font-size:14px;">&hearts;</span>
+            <span><em><a href="mrvivacious.github.io" target="_blank">More projects</a></em></span>
+          </em></span>
         <br>
 
       </div>
-
-
-  </div>
-</body>
-<script src="MagicalMessages.js"></script>
-
-
+    </div>
+  </body>
+  <script src="MagicalMessages.js"></script>
 </html>
